@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:goldenprice/core/network/api_constants.dart';
+
+import 'api_constants.dart';
 
 class DioHelper {
   static late Dio dio;
@@ -12,7 +13,11 @@ class DioHelper {
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(seconds: 20),
         receiveTimeout: const Duration(seconds: 20),
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+          'Accept': 'application/json',
+          "User-Agent":
+              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+        },
       ),
     );
   }
@@ -20,7 +25,7 @@ class DioHelper {
   static Future<Response> getData({
     required String endPoint,
     Map<String, dynamic>? queryParameters,
-   // String? token,
+    // String? token,
   }) async {
     return await dio.get(endPoint, queryParameters: queryParameters);
   }

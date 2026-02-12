@@ -4,7 +4,9 @@ import 'package:goldenprice/core/constants/app_assets.dart';
 import 'package:goldenprice/core/constants/app_colors.dart';
 import 'package:goldenprice/core/constants/app_strings.dart';
 import 'package:goldenprice/core/constants/app_text_styles.dart';
+import 'package:goldenprice/core/router/app_routes.dart';
 import 'package:goldenprice/core/widgets/custom_gradient_button.dart';
+import 'package:goldenprice/features/gold/presentation/screens/gold_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,7 +29,9 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 60),
             CustomGradientButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoutes.goldScreen);
+              },
               textButton: AppStrings.gold,
               buttonColor: const Color.fromARGB(255, 248, 191, 4),
             ),

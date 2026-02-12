@@ -1,4 +1,4 @@
 class AppRoutes {
     static const String homeScreen = '/';
-  static const String loginScreen ='/login';
+  static const String goldScreen ='/goldScreen';
 }
