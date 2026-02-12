@@ -6,6 +6,7 @@ sealed class GoldState {}
 final class GoldInitialState extends GoldState {}
 
 final class GoldLoadingState extends GoldState {}
+final class GoldUpdateState extends GoldState {}
 
 final class GoldErrorState extends GoldState {
   final String errorMessage;
@@ -16,7 +17,7 @@ final class GoldErrorState extends GoldState {
 final class GoldSuccessState extends GoldState {
   // The goldModel property holds the data retrieved or processed successfully.
   // The constructor initializes this property when the state is created
-  final GoldModel goldModel;
+  final ItemModel goldModel;
 
   GoldSuccessState(this.goldModel);
 }

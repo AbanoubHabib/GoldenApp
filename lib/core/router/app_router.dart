@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldenprice/core/router/app_routes.dart';
+import 'package:goldenprice/features/silver/screens/silver_screen.dart';
 
 import '../../features/gold/presentation/screens/home_screen.dart';
 import '../../features/gold/presentation/screens/gold_screen.dart';
@@ -19,6 +20,12 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) {
             return GoldScreen();
+          },
+        );
+        case AppRoutes.silverScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return SilverScreen();
           },
         );
 

@@ -4,12 +4,12 @@ import 'api_constants.dart';
 
 class DioHelper {
   static late Dio dio;
-
   static init() {
     dio = Dio(
       BaseOptions(
         baseUrl: ApiConstants.baseUrl,
-        // if server return error like 404 or 500 ? return data with error
+        // if server return error like 404 or 500 ?
+        // return data with error
         receiveDataWhenStatusError: true,
         connectTimeout: const Duration(seconds: 20),
         receiveTimeout: const Duration(seconds: 20),

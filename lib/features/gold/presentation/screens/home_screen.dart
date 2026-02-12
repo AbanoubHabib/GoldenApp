@@ -37,7 +37,9 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 33),
             CustomGradientButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoutes.silverScreen);
+              },
               textButton: AppStrings.silver,
               buttonColor: const Color.fromARGB(255, 107, 104, 104),
             ),
